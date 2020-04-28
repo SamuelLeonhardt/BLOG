@@ -1,83 +1,27 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import Image from "gatsby-image"
+import Media from 'react-bootstrap/Media'
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+const IndexPage = () => (
+  <Layout>
+    <SEO title="Home" />
+    <h1>Hora de aprender novas ferramentas?</h1>
+    <p>Claro que sim! </p>
+    <p>Hora de aprender <strong>Gatsby</strong></p>
+    <Link to="/page-2/">Temos segunda página?</Link><br/>
+    <Media>
+    <img
+    width={64}
+    height={64}
+    className="mr-3"
+    src="holder.js/64x64"
+    alt="Generic placeholder"
+    />  
+    </Media>
+  </Layout>
+)
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="RW" />
-      <Image
-        fixed={data.avatar.childImageSharp.fixed} alt ="Container Top Image RW"/>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
-      <Bio />
-    </Layout>
-  )
-}
-
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-    avatar: file(absolutePath: { regex: "../RW.png/" }) {
-        childImageSharp {
-          fixed(width: 324, height: 235) {
-            ...GatsbyImageSharpFixed
-          src
-          }
-        }
-      }
-  }
-`
+export default IndexPage

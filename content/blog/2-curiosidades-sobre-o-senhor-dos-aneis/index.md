@@ -1,7 +1,6 @@
 ---
 title: 2 Curiosidades sobre a trilogia de o Senhor dos Anéis
 date: "2020-04-24T22:12:03.284Z"
-description: "Senhor dos Anéis"
 ---
 
 > Texto não autoral, retirado do site: https://www.estrelando.com.br/foto/2018/12/08/confira-12-curiosidades-sobre-a-trilogia-de-o-senhor-dos-aneis-212446/foto-3

@@ -1,35 +1,86 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from 'prop-types'
+import React from 'react';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `gray`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Form,
+  Input,
+  Button
+} from 'reactstrap';
+
+class Header extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+    isOpen: false
+    };
+  }
+  toggle(){
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
+  render(){
+    return (
+      <div>
+        
+        <Navbar fixed= "top" light expand="md">
+          <div className= "container">
+          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand> {/* titulo do site */}
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/educacao-infantil">Educação Infantil</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/sobre-mim">Sobre mim</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/top-10-livros">Top 10 Livros</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Mundo Literário
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                  <NavLink href="/livros-nacionais">Livros Nacionais</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavLink href="/livros-internacionais">Livros Internacionais</NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <Form inline center>
+                  <Input type="text" placeholder="Search" className="mr-sm-2" onChange={this.changeSearchText} value={this.state.searchtext} onClick={this.findBooks}/>
+                  <Button color="danger" variant="outline-primary">Search</Button>
+              </Form>
+            </Nav>
+          </Collapse>
+          </div>
+        </Navbar>
+      </div>
+    );
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -38,5 +89,4 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
-
-export default Header
+export default Header;
