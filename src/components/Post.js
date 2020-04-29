@@ -7,7 +7,7 @@ import {Card, CardTitle, CardText, CardSubtitle, CardBody} from "reactstrap"
 const Post = ({title, author, fluid, date, body, slug}) => {
   return(
     <Card>
-      <Img className="card-image-left" fluid={fluid}/>
+      <Link to={slug}><Img className="card-image-left" fluid={fluid}/></Link>
       <CardBody>
         <CardTitle>
          <Link to={slug}>{title}</Link>
