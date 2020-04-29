@@ -42,7 +42,12 @@ h1 {
     
   }
 }
-
+.dropdown-menu.show{
+  background-color: #17978A;// altera às cores do container do submenu
+}
+.dropdown-menu.show:hover{
+  background-color: #18A395;// altera às cores do container do submenu
+}
 ul {
   list-style: none;
   padding: 0;
