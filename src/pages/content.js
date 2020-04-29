@@ -21,7 +21,7 @@ const BlogIndex = ({ data, location }) => {
                   
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body">
+                  <div class="card-body"> 
                     <div><h5 class="card-title">{title}</h5></div>
                     <p class="card-text" dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,

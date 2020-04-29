@@ -1,16 +1,15 @@
 ---
 title: 2 Curiosidades sobre a trilogia de o Senhor dos Anéis
-date: 2020-04-24 07:59:03
+date: '2020-04-24 07:59:03'
 author: 'Renan'
-path: 2-curiosidades-sobre-a-trilogia-de-o-senhor-dos-aneis
-
+image: ./frodo-face-ring.jpg
 ---
 
 > Texto não autoral, retirado do site: https://www.estrelando.com.br/foto/2018/12/08/confira-12-curiosidades-sobre-a-trilogia-de-o-senhor-dos-aneis-212446/foto-3
 
 
 ## O Universo
-
+'./frodo-face-ring.jpg'
 ![Palavras do um anel refletindo na face do Frodo](./frodo-face-ring.jpg)
 
 O Senhor dos Anéis é uma das franquias mais bem-sucedidas da história do cinema. A história gira em torno de Frodo Baggins que, após se ver em propriedade de um poderoso anel que poderia destruir a humanidade, resolve destruir a joia, com a ajuda de alguns companheiros. Ao longo de A Sociedade do Anel, As Duas Torres e O Retorno do Rei acompanhamos esta jornada que conquistou diversos prêmios e arrecadou bilheterias impressionantes ao redor do mundo. Veja a seguir curiosidades sobre a franquia!
