@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#606060`,
         theme_color: `#909090`,
         display: `minimal-ui`,
-          icon: `content/assets/RW.png`,
+          icon: `./src/image/RW.png`,
       },
     },
     //-------------------- Title, description e keywords ---------------------

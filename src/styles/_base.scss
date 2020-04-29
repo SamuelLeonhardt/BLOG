@@ -1,12 +1,17 @@
 .container#content {
   margin-top: 8rem; //margem do container principal
 }
+img{
+  margin-bottom: 0px; //variável entre o logo e navbar
+}
 body {
   background-color: #F7F7F7;
 }
 a {
   color: #0056b3;
-  
+  margin: 0px;
+  box-shadow: 0px;
+
   &:hover {
     color: #007bff;
     text-decoration: none;
@@ -30,6 +35,8 @@ h1 {
 .navbar-light .navbar-brand {
   color: #F4F4F4;
   font-weight: bold; /* Negrito */
+  padding-bottom: 0px ;
+
   &:hover {
     color: white;
     

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react';
+import logo from "../image/RW.png"
 
 import {
   Collapse,
@@ -36,10 +37,10 @@ class Header extends React.Component {
   render(){
     return (
       <div>
-        
-        <Navbar fixed= "top" light expand="md">
+        <Navbar fixed= "top" light expand="sm"> 
           <div className= "container">
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand> {/* titulo do site */}
+          <NavbarBrand href="/"><img src={logo} width="45" height="45" class="d-inline-block align-center" alt="Logo"/>
+            </NavbarBrand> {/* titulo do site */}
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -69,11 +70,11 @@ class Header extends React.Component {
                   <DropdownItem divider />
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <Form inline center>
+                <Form inline center>
                   <Input type="text" placeholder="Search" className="mr-sm-2" onChange={this.changeSearchText} value={this.state.searchtext} onClick={this.findBooks}/>
                   <Button color="danger" variant="outline-primary">Search</Button>
-              </Form>
-            </Nav>
+                </Form>
+                </Nav>
           </Collapse>
           </div>
         </Navbar>
