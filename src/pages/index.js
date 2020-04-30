@@ -31,7 +31,8 @@ const IndexPage = () => (
                 body={node.excerpt} //busca a descrição do post
                 slug={node.fields.slug} //busca o nome da post
                 fluid={node.frontmatter.image.childImageSharp.fluid}
-
+                tags={node.frontmatter.tags}
+                rate={node.frontmatter.ibr}
                 />
               ))}
             </div>
@@ -68,6 +69,7 @@ const indexQuery = graphql`
                   }
                 }
               }
+              tags
             }
           }
         }

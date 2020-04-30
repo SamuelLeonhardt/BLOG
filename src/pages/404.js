@@ -1,8 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
+import Img from 'gatsby-image'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Row, Col } from 'reactstrap'
 
 import error from "./404.png"
 import narnia from "./narnia.png"
@@ -15,8 +18,21 @@ const NotFoundPage = ({ data, location }) => {
       <SEO title="404: Not Found" />
 
       <h1>404 Página Não Encontrada</h1>
-      <img src = {error} alt="Página Não Encontrada"/>
-      <img src = {narnia} alt="Página Não Encontrada"/>
+      <Row>
+        <Col md="12">
+          <img src = {error} alt="Página Não Encontrada"/>
+        </Col>
+      </Row>
+      <Row>
+      <Col xs={{ size: 12, offset: 3 }} md={{ size: 6, offset: 4 }} lg={{ size: 6, offset: 5 }}>
+          <p>Devemos voltar?</p> 
+        </Col> 
+      </Row>
+      <Row>
+        <Col xs={{ size: 6, offset: 3 }} md={{ size: 6, offset: 4 }} lg={{ size: 6, offset: 5 }}>
+          <Link to="/" ><img src = {narnia} alt="Página Não Encontrada"/></Link>
+        </Col>    
+      </Row>
     </Layout>
   )
 }

@@ -3,7 +3,9 @@ title: Resumo o Código Da Vinci
 date: "2020-04-27T21:48:03.284Z"
 author: 'Renan'
 image: ./front-image.jpg
-internacional-book-rate: "4.5"
+ibr: "4.5"
+tags:
+- Livros Internacionais
 ---
 
 ![O código Da Vinci](./front-image.jpg)
