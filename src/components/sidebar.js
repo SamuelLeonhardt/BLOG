@@ -2,7 +2,6 @@ import React from "react"
 import {Card, CardTitle, Form, FormGroup, CardBody, Input, Button} from "reactstrap"
 
 const Sidebar = () => (
-
   <div>
     <Card>
       <CardBody>

@@ -37,6 +37,9 @@ class Header extends React.Component {
   render(){
     return (
       <div>
+        {/* //adsense */}
+        <script data-ad-client="ca-pub-5312817845575956" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {/* //adsense */}
         <Navbar fixed= "top" light expand="sm"> 
           <div className= "container">
           <NavbarBrand href="/"><img src={logo} width="45" height="45" class="d-inline-block align-center" alt="Logo"/>
