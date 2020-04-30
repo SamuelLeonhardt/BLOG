@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Post from '../components/Post'
 
 import { Row, Col } from 'reactstrap'
+import Sidebar from '../components/sidebar'
 
 const IndexPage = () => (
   <Layout>
@@ -42,7 +43,7 @@ const IndexPage = () => (
       </Col>
 
       <Col md="4">
-        <div style={{width: "100%", height: "100%", backgroundColor: "orange"}}></div>
+        <Sidebar/>
       </Col>
     </Row>
   </Layout>

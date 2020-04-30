@@ -29,9 +29,9 @@ const Layout = ({ children }) => {
 
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Desenvolvido por
           {` `}
-          <a href="https://samuelleonhardt.com">Samuel</a>
+          <a href="https://samuelleonhardt.com">Samuel Leonhardt</a>
         </footer>
       </div>
     </>

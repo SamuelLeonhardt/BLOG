@@ -23,12 +23,12 @@ const NotFoundPage = ({ data, location }) => {
         </Col>
       </Row>
       <Row>
-      <Col xs={{ size: 12, offset: 3 }} md={{ size: 6, offset: 4 }} lg={{ size: 6, offset: 5 }}>
+      <Col className="text-center text-uppercase mb-3">
           <p>Devemos voltar?</p> 
         </Col> 
       </Row>
       <Row>
-        <Col xs={{ size: 6, offset: 3 }} md={{ size: 6, offset: 4 }} lg={{ size: 6, offset: 5 }}>
+        <Col className="text-center text-uppercase mb-3">
           <Link to="/" ><img src = {narnia} alt="Página Não Encontrada"/></Link>
         </Col>    
       </Row>
