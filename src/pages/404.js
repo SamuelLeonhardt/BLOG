@@ -19,17 +19,17 @@ const NotFoundPage = ({ data, location }) => {
       <h1>404 Página Não Encontrada</h1>
       <Row>
         <Col md="12">
-          <img src = {error} alt="Página Não Encontrada"/>
+          <img src = {error} alt="Página Não Encontrada"style={{width: "100%"}}/>
         </Col>
       </Row>
       <Row>
       <Col className="text-center text-uppercase mb-3">
-          <p>Devemos voltar?</p> 
+        <br/><p>Devemos voltar?</p> 
         </Col> 
       </Row>
       <Row>
-        <Col className="text-center text-uppercase mb-3">
-          <Link to="/" ><img src = {narnia} alt="Página Não Encontrada"/></Link>
+        <Col className="text-center mb-3">
+          <Link to="/" ><img src = {narnia} alt="Página Não Encontrada" style={{width: "5rem"}}/></Link>
         </Col>    
       </Row>
     </Layout>
