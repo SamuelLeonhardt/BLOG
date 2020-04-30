@@ -11,7 +11,7 @@ const Sidebar = () => (
         <CardTitle className="text-center text-uppercase mb-3">
           #fique em casa
         </CardTitle>
-        <Link fique to="coronavirus.saude.gov.br/" className="center"><img src = {fiqueemcasa} alt="Fique em casa" style={{width: "100%"}}/></Link>
+        <a href="https://coronavirus.saude.gov.br/" className="link"><img src = {fiqueemcasa} alt="Fique em casa" style={{width: "100%"}}/></a>
       </CardBody>
     </Card>
 
@@ -22,7 +22,7 @@ const Sidebar = () => (
         </CardTitle>
       </CardBody>
     </Card>
-    
+
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
