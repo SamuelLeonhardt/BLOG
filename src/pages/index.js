@@ -12,10 +12,10 @@ import HeaderCarousel from '../components/carousel'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home" />   
     <Row>
       <Col md="8">
-        <HeaderCarousel/>
+        <HeaderCarousel/><br/>
         <StaticQuery 
         query={indexQuery}
         render = {data => {
