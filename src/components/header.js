@@ -52,13 +52,10 @@ class Header extends React.Component {
                 <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/educacao-infantil">Educação Infantil</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/sobre-mim">Sobre mim</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/top-10-livros">Top 10 Livros</NavLink>
+                <NavLink href="/educacao-infantil">Educação Infantil</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
