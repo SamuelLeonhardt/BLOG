@@ -5,9 +5,10 @@ import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from '../components/Post'
+import Sidebar from '../components/sidebar'
 
 import { Row, Col } from 'reactstrap'
-import Sidebar from '../components/sidebar'
+import HeaderCarousel from '../components/carousel'
 
 const IndexPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = () => (
     
     <Row>
       <Col md="8">
+        <HeaderCarousel/>
         <StaticQuery 
         query={indexQuery}
         render = {data => {

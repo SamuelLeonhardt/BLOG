@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { Link } from "gatsby"
 
-import {Card, CardTitle, Form, FormGroup, CardBody, Input, Button, Media} from "reactstrap"
+import {Card, CardTitle, Form, FormGroup, CardBody, Input, Button} from "reactstrap"
 import fiqueemcasa from "../image/stayathome.svg"
 const Sidebar = () => (
   <div>
@@ -11,7 +10,7 @@ const Sidebar = () => (
         <CardTitle className="text-center text-uppercase mb-3">
           #fique em casa
         </CardTitle>
-        <a href="https://coronavirus.saude.gov.br/" className="link"><img src = {fiqueemcasa} alt="Fique em casa" style={{width: "100%"}}/></a>
+        <a href="https://coronavirus.saude.gov.br/" target="_blank" rel="noopener noreferrer" className="link"><img src = {fiqueemcasa} alt="Fique em casa" style={{width: "100%"}}/></a>
       </CardBody>
     </Card>
 
