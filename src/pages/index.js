@@ -13,11 +13,6 @@ import HeaderCarousel from '../components/carousel'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hora de aprender novas ferramentas?</h1>
-    <p>Claro que sim! </p>
-    <p>Hora de aprender <strong>Gatsby</strong></p>
-    <Link to="/page-2/">Temos segunda página?</Link><br/>
-    
     <Row>
       <Col md="8">
         <HeaderCarousel/>
