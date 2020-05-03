@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Footer from "../components/footer"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -22,7 +21,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               marginTop: rhythm(1),
-              marginBottom: 0,
+              marginBottom: 10,
             }}
           >
             {post.frontmatter.title}
@@ -43,9 +42,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Footer />
-        </footer>
+
       </article>
 
       <nav>
@@ -64,6 +61,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 ← {previous.frontmatter.title}
               </Link>
             )}
+          </li>
+          <li>
+          <Link to={"/"}>Voltar 
+              </Link>
+
           </li>
           <li>
             {next && (
@@ -93,7 +95,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM, YYYY")
       }
     }
   }

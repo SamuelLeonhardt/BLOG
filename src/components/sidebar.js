@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
 
-import {Card, CardTitle, Form, FormGroup, CardBody, Input, Button} from "reactstrap"
+import {Card, CardTitle, CardBody} from "reactstrap"
 import fiqueemcasa from "../image/stayathome.svg"
 const Sidebar = () => (
   <div>
@@ -22,50 +21,60 @@ const Sidebar = () => (
       </CardBody>
     </Card>
 
+    {/* ---------------------------------------------------- */ }
+    {/* ---------------- Redes Sociais --------------------- */ }
+    {/* ---------------------------------------------------- */ }
+
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
-          Newsletter
+          Redes Sociais
         </CardTitle>
-        <Form className="text-center">
-          <FormGroup><Input 
-          type="email"
-          name="email"
-          placeholder="Seu E-mail"
-          />
-          </FormGroup>
-          <Button className="btn btn-outline-sucess text-uppercase">Inscreva-se</Button>
-        </Form>
+        <ul className="social-link-list">
+          <li>
+            <a 
+              href="https://www.facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="facebook"
+            >
+              <img className="facebook" src="https://image.flaticon.com/icons/svg/2111/2111393.svg" alt="Imagem do Facebook"></img>
+            </a>
+
+            <a 
+              href="https://www.twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="twitter"
+            >
+              <img className="twitter" src="https://image.flaticon.com/icons/svg/733/733579.svg" alt="Imagem do Twitter"></img>
+            </a>
+
+            <a 
+              href="https://www.instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="instagram"
+            >
+              <img className="instagram" src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Imagem do Instagram"></img>
+            </a>
+
+            <a 
+              href="https://www.youtube.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="youtube"
+            >
+              <img className="youtube" src="https://image.flaticon.com/icons/svg/1384/1384060.svg" alt="Imagem do Youtube"></img>
+            </a>
+          </li>
+      </ul>
       </CardBody>
     </Card>
+    {/* ---------------------------------------------------- */ }
+    {/* ---------------- Redes Sociais --------------------- */ }
+    {/* ---------------------------------------------------- */ }
   </div>
 )
-
-const sidebarQuery = graphql`
-    query sidebarQuery {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }
-        limit:3
-        ) {
-            edges {
-              node {
-                id
-                fields {
-                slug
-                }
-                frontmatter {
-                  title
-                  image{
-                    childImageSharp{
-                      fluid(maxWidth: 300){
-                        ...GatsbyImageSharpFluid
-                      }
-                    }
-                  }
-                }
-              }
-            }
-        }
-    }
-`
 
 export default Sidebar

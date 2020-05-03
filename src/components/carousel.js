@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from "gatsby"
+
 import {
   Carousel,
   CarouselItem,
@@ -6,25 +8,22 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import image1 from '../../content/blog/2-curiosidades-sobre-o-senhor-dos-aneis/frodo-face-ring.jpg'
-import image2 from '../../content/blog/2-curiosidades-sobre-o-senhor-dos-aneis/gandalf.jpg'
-import image3 from '../../content/blog/2-curiosidades-sobre-o-senhor-dos-aneis/pippin-in-minas-tirith.jpg'
+import image1 from '../image/educacao-infantil.jpg'
+import image2 from '../image/livros-nacionais.jpg'
+import image3 from '../image/dev.jpg'
 
 const items = [
   {
     src: `${image1}`,
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    caption: 'Educação Infantil'
   },
   {
     src: `${image2}`,
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    caption: 'Top 10 Livros'
   },
   {
     src: `${image3}`,
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    caption: 'Dev'
   }
 ];
 
@@ -57,7 +56,7 @@ const HeaderCarousel = (props) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText}  style={{height: "300px", width:"100%"}} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption className="d-inline" captionHeader={item.caption}/>
       </CarouselItem>
     );
   });
