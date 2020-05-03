@@ -4,18 +4,14 @@ import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from '../components/Post'
-import Sidebar from '../components/sidebar'
 
-import { Row, Col } from 'reactstrap'
 import HeaderCarousel from '../components/carousel'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />   
-    <Row>
-      <Col md="8">
-        <HeaderCarousel/><br/>
-        <StaticQuery 
+      <HeaderCarousel/><br/>
+      <StaticQuery 
         query={indexQuery}
         render = {data => {
           return(
@@ -35,13 +31,7 @@ const IndexPage = () => (
             </div>
           )
         }}
-        />
-      </Col>
-
-      <Col md="4">
-        <Sidebar/>
-      </Col>
-    </Row>
+      />
   </Layout>
 )
 

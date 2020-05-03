@@ -33,7 +33,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+          <Link to={"/"}>←</Link><br/>
+          {post.frontmatter.date}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -63,8 +64,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
           <li>
-          <Link to={"/"}>Voltar 
-              </Link>
 
           </li>
           <li>
