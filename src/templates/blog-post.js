@@ -33,7 +33,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-          <Link to={"/"}>←</Link><br/>
+          <Link to={"/"} style={{fontSize: "30px", fontWeight:"bold"}}>←</Link><br/>
           {post.frontmatter.date}
           </p>
         </header>
